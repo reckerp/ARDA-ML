@@ -33,5 +33,17 @@ A further prediction can be stated that during the first few iterations, the gre
 Overall it can be concluded that there should be a significant correlation between the accuracy and the training iterations for the experiment discussed.  
 
 ## 4. Research Methodology
-### 4.1 Primary Research
-### 4.2 Secondary Research
+- Empirical research: relies on evidence that can be observed or measured
+- Quantative research: based on iterations, accuracy and loss
+
+- Identifying data:
+    - Accuracy and loss: continuous ratio (0% means no predictions correct)
+    - No. of iterations: continuous ratio (0 iterations mean no training)
+
+### 4.1 Chapter overview
+- Methodology
+    - Research Design => type of research (e.g. see above). Justify why this approach is best suited to answer research questions.
+    - Experiment setup and execution => dataset, createml (+ its algorithm), 1k steps, ...
+    - Experiment evaluation => evaluation categories and images, data gathered
+    - Data transformation and visualisation => python notebook, types of graphs etc, (possibly how this report was created-> latex, ...)
+
