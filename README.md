@@ -23,6 +23,7 @@ Accuracy of the computer vision program (the accuracy of the program identifying
 - Same Laptop specifications 
 
 ## 3. Hypothesis
+_[updated here](report/Introduction.tex)_ <br/>
 It can be hypothesised that increasing the number of training iterations a machine learning algorithm is trained with, will have a direct impact on the accuracy of the computer vision model. 
 This can be predicted on the basis that each additional iteration of training for the program, will allow the given program to converge towards a more optimal solution by adjusting its parameters to minimize the differences between the training and test data. 
 
