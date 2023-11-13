@@ -13,13 +13,13 @@
 %use this exact command. The style and bibliographystyle has to be authoryear (Havard). The sorting is nyt: name, year, title so that the bibliography is sorted alphabetically. firstinits=true shortens the names: Albert Einstein -> A. Einstein
 \usepackage[backend=bibtex,style=authoryear,bibstyle=authoryear,sorting=nyt,firstinits=true]{biblatex}
 \setlength\parindent{0pt}%include this so that your paragraphs don't indent automatically
-\addbibresource{report.bib} %this attaches your bib-file, your bibliography (must be in the same folder)
+\addbibresource{ARDA-ML.bib} %this attaches your bib-file, your bibliography (must be in the same folder)
 \usepackage[compact]{titlesec}%include title formatting package
 
 % Title Page
-\title{Title here}
-\author{Pietje Puk and Piet Pukje}
-\date{December 15th 2019 \\Module: SEAR \\Venlo, Limburg, Netherlands}
+\title{Exploring the Impact of Training Iterations on Object Detection Accuracy in Computer Vision}
+\author{Louis Ferger Andrews and Paul Recker}
+\date{December 18th 2023 \\Module: ARDA \\Venlo, Limburg, Netherlands}
 
 
 \begin{document}
@@ -37,8 +37,8 @@ This is the abstract.
 \pagebreak
 \pagenumbering{arabic}	
 	
-\include{report_template_multipleFiles_Introduction} 
-\include{report_template_multipleFiles_Methods} 
+\include{Introduction} 
+\include{Methodology}
 \end{document}
 	
 	
