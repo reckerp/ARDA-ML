@@ -4,10 +4,63 @@ It will cover the research design, the experiment setup and execution, as well a
 and visualization.
 
 \subsection{Research Design}
-The research design used in this paper is a quantitative experiment. The experiment is conducted by...
+The research of this paper is based on empirical and quantitative data collected from an experiment.
+As a foundation for this experiment, there are key variables one being the independent variable and the 
+dependent variable. The independent variable in this case is the number of iterations the algorithm will
+process the dataset, while the dependent variable is the accuracy of the algorithm in detecting objects.
+To make sure results are accurate and consistent, all ierations will use the same machine learning algorithm,
+the same dataset, the same evaluation data, and run on the same hardware.
+The data which is being collected and analyzed is the number of iterations (continuous ratio), the accuracy
+and loss (continuous ratio), and the relation between them.
 
 \subsection{Experiment Setup and Execution}
-The experiment is conducted by...
+The program "CreateML" from \cite{Apple} was used to carry out this experiment. It is a user-friendly and powerful 
+tool that allows developers to create custom machine learning models without the need for extensive expertise in the field.
+CreateML simplified the process of creating and training an object detection model by providing a graphical user interface which 
+just takes the input dataset and the desired parameters. The object detection model uses the YOLOv2 \parencite{Jain} algorithm.
+"You Only Look Once (YOLO) is a state-of-the-art, real-time object detection algorithm introduced in 2015" \parencite{Keita2022}. 
+The dataset used to train the object detection model is \citetitle{pascal2023} which is a collection of around 10000 images including classes
+like persons, vehicles and animals. The experiment was ran on a MacBook Air 2020 with an Apple M1 chip and 8GB of RAM. To make sure the 
+result was usable the "Batch size" was left on auto and the "Grid Size" was left on 13x13.
+\newpage
+Overall the model was trained 20.000 times and every 1000 iterations a snapshot of the model was taken and evaluated using
+specific images. 
+The classes and images chosen include:
+\begin{enumerate}
+    \item Airplane
+        \begin{itemize}
+            \item \citetitle{zotero-40}
+            \item \citetitle{zotero-34}
+            \item \citetitle{zotero-37}
+        \end{itemize}
+    \item Boat
+        \begin{itemize}
+            \item \citetitle{zotero-43}
+            \item \citetitle{zotero-47}
+            \item \citetitle{zotero-45}
+        \end{itemize}
+    \item Car
+        \begin{itemize}
+            \item \citetitle{zotero-54}
+            \item \citetitle{zotero-52}
+            \item \citetitle{zotero-56}
+        \end{itemize}
+    \item Dog
+        \begin{itemize}
+            \item \citetitle{zotero-22}
+            \item \citetitle{zotero-19}
+            \item \citetitle{zotero-16}
+        \end{itemize}
+    \item Person
+        \begin{itemize}
+            \item \citetitle{zotero-25}
+            \item \citetitle{zotero-29}
+            \item \citetitle{zotero-27}
+        \end{itemize}
+\end{enumerate}
+\\
+Each snapshot was evaluated by using the above mentioned images and the accuracy and loss was saved in a CSV file to later 
+analyse and visualise.
 
 \subsection{Data Transformation and Visualization}
 The data transformation and visualization is done by...
