@@ -21,47 +21,14 @@ just takes the input dataset and the desired parameters. The object detection mo
 "You Only Look Once (YOLO) is a state-of-the-art, real-time object detection algorithm introduced in 2015" \parencite{Keita2022}. 
 The dataset used to train the object detection model is \citetitle{pascal2023} which is a collection of around 10000 images including classes
 like persons, vehicles and animals. The experiment was ran on a MacBook Air 2020 with an Apple M1 chip and 8GB of RAM. To make sure the 
-result was usable the "Batch size" was left on auto and the "Grid Size" was left on 13x13.
-\newpage
+result was usable the "Batch size" was left on auto and the "Grid Size" was left on 13x13.\\
 Overall the model was trained 20.000 times and every 1000 iterations a snapshot of the model was taken and evaluated using
 specific images. 
-The classes and images chosen include:
-\begin{enumerate}
-    \item Airplane
-        \begin{itemize}
-            \item \citetitle{zotero-40}
-            \item \citetitle{zotero-34}
-            \item \citetitle{zotero-37}
-        \end{itemize}
-    \item Boat
-        \begin{itemize}
-            \item \citetitle{zotero-43}
-            \item \citetitle{zotero-47}
-            \item \citetitle{zotero-45}
-        \end{itemize}
-    \item Car
-        \begin{itemize}
-            \item \citetitle{zotero-54}
-            \item \citetitle{zotero-52}
-            \item \citetitle{zotero-56}
-        \end{itemize}
-    \item Dog
-        \begin{itemize}
-            \item \citetitle{zotero-22}
-            \item \citetitle{zotero-19}
-            \item \citetitle{zotero-16}
-        \end{itemize}
-    \item Person
-        \begin{itemize}
-            \item \citetitle{zotero-25}
-            \item \citetitle{zotero-29}
-            \item \citetitle{zotero-27}
-        \end{itemize}
-\end{enumerate}
+The classes and images chosen include: Boat, Dog, Person, Plant, Wheel.
 \\
-Each snapshot was evaluated by using the above mentioned images and the accuracy and loss was saved in a CSV file to later 
+Each snapshot was evaluated by using the above mentioned images and the accuracy as well as the loss was saved in a CSV file to later 
 analyse and visualise.
 
-\subsection{Data Transformation and Visualization}
-The data transformation and visualization is done by...
+\subsection{Data Transformation and Visualisation}
+The data transformation and visualisation is done by...
 
