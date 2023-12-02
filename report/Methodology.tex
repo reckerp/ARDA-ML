@@ -22,9 +22,15 @@ just takes the input dataset and the desired parameters. The object detection mo
 The dataset used to train the object detection model is \citetitle{pascal2023} which is a collection of around 10000 images including classes
 like persons, vehicles and animals. The experiment was ran on a MacBook Air 2020 with an Apple M1 chip and 8GB of RAM. To make sure the 
 result was usable the "Batch size" was left on auto and the "Grid Size" was left on 13x13.\\
+\newpage
 Overall the model was trained 20.000 times and every 1000 iterations a snapshot of the model was taken and evaluated using
 specific images. 
 The classes and images chosen include: Boat, Dog, Person, Plant, Wheel.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.70\textwidth]{../Data/distribution-classes-barchart.png}
+  \caption{Class Usage in Dataset (\%)}
+\end{figure}
 \\
 Each snapshot was evaluated by using the above mentioned images and the accuracy as well as the loss was saved in a CSV file to later 
 analyse and visualise.
