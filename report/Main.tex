@@ -19,6 +19,14 @@
 \setlength\parindent{0pt}%include this so that your paragraphs don't indent automatically
 \addbibresource{ARDA-ML.bib} %this attaches your bib-file, your bibliography (must be in the same folder)
 \usepackage[compact]{titlesec}%include title formatting package
+\usepackage{graphicx}
+
+\subsubsectionfont{\sffamily\small}
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+
+
 
 % Title Page
 \title{Exploring the Impact of Training Iterations on Object Detection Accuracy in Computer Vision}
@@ -31,6 +39,7 @@
 
 \begin{abstract}
 This is the abstract.
+
 \pagenumbering{roman}
 \end{abstract}
 
@@ -43,10 +52,15 @@ This is the abstract.
 	
 \include{Introduction} 
 \include{Methodology}
+\include{Results}
+\include{Discussion}
+\include{Appendix}
+
 \end{document}
 	
-	
 \printbibliography[title=References]
+
+
 	
 	
 	
