@@ -17,7 +17,7 @@ and loss (continuous ratio), and the relation between them.
 The program "CreateML" from \cite{Apple} was used to carry out this experiment. It is a user-friendly and powerful 
 tool that allows developers to create custom machine learning models without the need for extensive expertise in the field.
 CreateML simplified the process of creating and training an object detection model by providing a graphical user interface which 
-just takes the input dataset and the desired parameters. The object detection model uses the YOLOv2 \parencite{Jain} algorithm.
+just takes the input dataset and the desired parameters. The object detection model uses the YOLOv2 \parencite{Jaina} algorithm.
 "You Only Look Once" (YOLO) is a state-of-the-art, real-time object detection algorithm introduced in 2015" \parencite{Keita2022}. 
 The dataset used to train the object detection model is \citetitle{pascal2023} which is a collection of around 10000 images including classes
 like persons, vehicles and animals. The experiment was ran on a MacBook Air 2020 with an Apple M1 chip and 8GB of RAM. To make sure the 
@@ -56,8 +56,11 @@ Additionally, a XXXXXXXX trend line was added to easier identify the trend and o
 To plot the accuracy all CSV files were merged by iterating through each file, calculating the mean accuracy per iteration and appending it
 to the new pandas dataframe. This resulted in a dataframe with the mean accuracy per iteration for each class. This data was then plotted using
 a line chart (see Fig. %TODO: ADD REFERENCE TO LINE CHART
-). The line chart was chosen because it is useful for illustrating trends over time \parencite{Statistics-Canada2021a}.\\
+).
 % ACCURACY IMPROVEMENT GRAPH
-
+To illustrate the improvement of accuracy over time, the average accuracy of all classes per iteration was calculated.
+From that the percentual increase of accuracy was calculated and then with the average accuracy plotted against the number of iterations (see Fig. %TODO: ADD REFERENCE TO LINE CHART
+).
+A line chart was chosen for both because it is useful for illustrating trends over time \parencite{Statistics-Canada2021a}.\\
 % BOX PLOT PER ITERATION
 
