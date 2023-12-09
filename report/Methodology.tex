@@ -35,7 +35,7 @@ The classes and images chosen include: Boat, Dog, Person, Plant, Wheel.
 \\
 Each snapshot was evaluated by using the above mentioned images and the accuracy as well as the loss was saved in a CSV file to later 
 analyse and visualise.
-
+\\
 \subsection{Data Transformation and Visualisation}
 Data transformation and and its visualisation is a key part of this experiment. The gathered data was exported to multiple CSV files, 
 which were categorized by class and consisted of the number of iterations and the accuracy per piture. Python and Jupyter Notebooks were the
@@ -48,19 +48,22 @@ and the image count per class. To illustrate which classes were evaluated and th
 (See Fig.\ref{fig:class-usage-in-dataset}). This choice was motivated by the observation that "[v]ertical bar charts are useful to compare 
 different categorical [...] variables" \parencite{Statistics-Canada2021}.\\
 % LOSS GRAPH
-The loss was graphed by using a scatter plot (see Fig. %TODO: ADD REFERENCE TO SCATTER PLOT
-) as it visualises the relationship between two or more quantitative variables. They are especially helpful when examining whether
+The loss was graphed by using a scatter plot (see Fig. \ref{fig:loss-vs-training-iterations})
+as it visualises the relationship between two or more quantitative variables. They are especially helpful when examining whether
 the values of one variable are influenced by the values of the other variable \parencite{Statistics-Canada2021b}. 
-Additionally, a XXXXXXXX trend line was added to easier identify the trend and outliers.\\
+Additionally, a quadratic trend line was added to easier identify the trend and outliers.\\
 % ACCURACY GRAPH
 To plot the accuracy all CSV files were merged by iterating through each file, calculating the mean accuracy per iteration and appending it
 to the new pandas dataframe. This resulted in a dataframe with the mean accuracy per iteration for each class. This data was then plotted using
-a line chart (see Fig. %TODO: ADD REFERENCE TO LINE CHART
-).
+a line chart (see Fig. \ref{fig:accuracy-vs-training-iterations}).
 % ACCURACY IMPROVEMENT GRAPH
 To illustrate the improvement of accuracy over time, the average accuracy of all classes per iteration was calculated.
-From that the percentual increase of accuracy was calculated and then with the average accuracy plotted against the number of iterations (see Fig. %TODO: ADD REFERENCE TO LINE CHART
-).
+From that the percentual increase of accuracy was calculated and then with the average accuracy plotted against the number of iterations
+(see Fig. \ref{fig:accuracy-improvement}).
 A line chart was chosen for both because it is useful for illustrating trends over time \parencite{Statistics-Canada2021a}.\\
+% BAR CHART FLUCTUATION WHEEL AND DOG
+For further investigation into the perfomance of some classes, the accuracy for a specific iteration per picture was plotted 
+using a bar chart (see Fig. %TODO: ADD REFERECE). 
+This was done to identify outliers and to clearly display discrepancies in performance between pictures of the same class.\\
 % BOX PLOT PER ITERATION
 
