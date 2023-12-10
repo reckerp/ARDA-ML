@@ -56,13 +56,68 @@ visible. The described fluctuation in accuracy needed to be further investigated
 challenges in the learning process of the object detection model. \\
 
 \subsection{Analysing fluctuation in loss and accuracy}
-- address the outliers, 
-- refrence the the accuracy for the diffrent iterations 
 
-- two graphs showing the outlieres
+The data reveals a notable decline in accuracy at 13,000 training iterations for the dog class and 14,000 training iterations for the wheel class, respectively. To further investigate the observed downturns in the data, analysing the average data points displaying the decline can provide a more comprehensive insight. The data points displayed in Figure (----) for each class represent the average accuracy score of three images. 
+\newpage
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=0.5\textwidth]{../Data/dog-outliers.png}
+   \caption{Accuracy Discrepancy Among Images in Dog Class at 13,000 Training Iterations}
+   \label{fig:14000-dog}
+\end{figure}
+
+Figure \ref{fig:14000-dog} displays three different instances of the dog class that make up the average data point for 13,000 training iterations, at which the dip in data was observed. The graph in Figure \ref{fig:14000-dog} reveals the accuracy score obtained by each image during this iteration test. Notable both images 2 and 3 receive high accuracy scores with 87 and 89 percentage points respectively. On the other hand image 1 only has an accuracy of 12 percentage points, showing an anomaly in the data.
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=0.5\textwidth]{../Data/dogs_image1_accuracy_vs_iteration.png}
+   \caption{Dog Class Image 3 Training Iterations vs. Accuracy }
+   \label{fig:image-1-accuracy}
+\end{figure}
+
+To further illustrate and investigate the dip in accuracy in the dog class, and the found anomaly in image 1,  Figure \ref{fig:image-1-accuracy} can be utilised, which displays the relationship between accuracy and training interaction for image 1. Notable in this Figure, is that the previously discovered anomaly of 12 percent at 13,000 training iterations is also clearly represented in the graph at the steep dip. This data point is a significant deviation from the otherwise existing pattern, displaying a clear divergence from the expected accuracy trajectory. Therefore it can be concluded that this data point represents an outlier in the data. Reasons for such an outlier will be evaluated in the discussion chapter. 
+\newpage
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=0.5\textwidth]{../Data/wheel-outliers.png}
+   \caption{Accuracy Discrepancy Among Images in Whell Class at 14,000 Training Iterations}
+   \label{fig:13000-wheel}
+\end{figure}
+
+A similar analysis can be drawn for the wheel class, in Figure \ref{fig:13000-wheel} the accuracy score for the three instances of the wheel class at 14,000 training iterations can be observed. Whilst images 1 and 2 received 100 percent and 98 percent accuracy, image 3 displays as a clear anomaly with only 2 percent accuracy. 
+
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=0.5\textwidth]{../Data/wheel_image1_accuracy_vs_iteration.png}
+   \caption{Dog Class Image 3 Training Iterations vs. Accuracy }
+   \label{fig:image-3-accuracy}
+\end{figure}
+
+To further analyse the cause of the anomaly found at 14,000 iterations in image 3, figure \ref{fig:image-3-accuracy} can be utilised, displaying the accuracy of image 3 in the wheel class over 20,000 iterations. This graph illustrates that the given anomaly does not follow the data trend, but rather deviates from the accuracy trajectory, due to its considerably lower accuracy score. Consequently, this data point can also be classified as an outlier, this will be further examined in the discussion chapter. \\
+\newpage
+
 
 \subsection{Distribution of model accuracy across training iterations}
-- box plot per iteration 
+
+\begin{figure}[h]
+   \centering
+   \includegraphics[width=0.9\textwidth]{../Data/box_plot_iteration_vs_accuracy.png}
+   \caption{Box Plot of Model Accuracy Across Different Training Iteration Groups}
+   \label{fig:Box-plot}
+\end{figure}
+
+
+The following Figure \ref{fig:Box-plot} illustrates a comprehensive overview of the changes in the model's accuracy throughout 20,000 training iterations. It displays the distribution and tendencies of the accuracy throughout the training process in relation to the entire model.\\
+
+Initially, the Figure displays an initial surge in model accuracy up to 4000 iterations. From this point onwards, the median accuracy stabilizes and the variance diminishes in the 4000-12000 training iteration range. Beyond 12000 iterations, there is only minimal change in the median accuracy, signalling the onset of a plateau. Thereafter the graph displays that with further training, only a slight decrease in variance and an increase in median is achieved. \\
+
+One key aspect that the box plot highlights is the changes in data variability throughout the model's training process. Initially, a greater degree of variability is displayed, especially in the grouped 2000-4000 training iteration block. Here the interquartile range (IQR) is notably wider, clearly displaying the greater spread of different accuracy scores.  However, as the training iteration count increases, the range of the spread decreases. The IQR becomes progressively narrower in the higher training iteration groups, indicating a decrease in variability. \\
+
+
+
+
 
 
 
