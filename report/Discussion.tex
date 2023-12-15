@@ -20,13 +20,13 @@ hypothesis complexity, or multiple comparisons procedures. Another reason, accor
 which means that the accuracy of the object recognition model may deteriorate due to noise learning,
 which is a pretty strong concept from the 1970s \parencite[1--2]{Xue2019}.\\
 Further explanations also could be the model's learning rate or problems with the training data set. If the learning rate is too high, the
-model might be taking too large steps in the parameter space and overshooting the optimal solution \cite{GreatLearningTeam2020}.
+model might be taking too large steps in the parameter space and overshooting the optimal solution \parencite{GreatLearningTeam2020}.
 Problems with the dataset could be imbalance in which case the model might become biased towards the majority class \parencite{Brownlee2019a} . 
 This imbalance can be seen in Figure \ref{fig:class-usage-in-dataset}. But this imbalance is likely not the cause of the issue since 
 "Wheel" has the second highest representation in the dataset, while "Dog" has a relatively low representation, but both classes show the same 
 fluctuation in accuracy at roughly the same time.\\
-The last option could be due to random chance. Due to the stochastic nature of most optimization algorithms used in machine 
-learning, the performance of the model can sometimes worsen purely due to random chance \parencite{Brownlee2021}.\\
+The last option is that the fluctuations could be a result of random chance. Due to the stochastic nature of most optimization algorithms
+used in machine learning, the performance of the model can sometimes worsen purely due to random chance \parencite{Brownlee2021}.\\
 
 
 Notable is also the spread of the data and its variance found in the results as the accuracy improves over time. This is a key aspect of such models as for real-world applications, where consistent performance is essential. For instance, in self-driving cars, such deployed models must be able to consistently identify objects with high precision, not just occasionally. Even though the model at times reached high accuracy scores, it was inconsistent and instances of low accuracy scores were recurring, resulting in greater variance. However, in the later training stages,  as the median accuracy increased, the variance reduced, resulting in the lower accuracy scores of the given later stage, still being relatively high and precise predictions by the model.   \\
