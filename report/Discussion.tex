@@ -9,8 +9,25 @@ When analysing the model's evolution, it is observed that during the initial tra
 
 Noteworthy is also the weak inverse correlation between the loss and accuracy of the model throughout the training process. This indicates that as the accuracy increases, the loss decreases. The loss is a measure of the errors made by a model \parencite{Baeldung2022}. This also explains the observed inverse correlation. With fewer errors, the lower the loss will be and in return will lead to higher precision, resulting in a higher accuracy score. \\
 
+% ----- DIP EXPLAINED -----
 
-Additionally, the findings reveal a slight decline in the performance of the model in the later stages of the experiment, characterised by a dip in the results. An explanation for this can be overfitting, in which the model excessively adapts to the given training data, compromising the ability to adapt to new data such as the test images used. Therefore, after overfitting, the model could obtain lower accuracy scores in comparison to scores obtained in previous training iterations. \\
+Additionally, the findings reveal a slight drop in the performance of the model in the later stages of the experiment, 
+characterised by a dip in the results.\\
+One explanation for this can be overfitting, in which the model excessively adapts to the given training data, compromising the ability to 
+adapt to new data such as the test images used. Therefore, after overfitting, the model could obtain lower accuracy scores in comparison 
+to scores obtained in previous training iterations. Three causes for overfitting could be noise in the dataset, 
+hypothesis complexity, or multiple comparisons procedures. Another reason, according to Xue, is "early stopping",
+which means that the accuracy of the object recognition model may deteriorate due to noise learning,
+which is a pretty strong concept from the 1970s \parencite[1--2]{Xue2019}.\\
+Further explanations also could be the model's learning rate or problems with the training data set. If the learning rate is too high, the
+model might be taking too large steps in the parameter space and overshooting the optimal solution \parencite{GreatLearningTeam2020}.
+Problems with the dataset could be imbalance in which case the model might become biased towards the majority class \parencite{Brownlee2019a} . 
+This imbalance can be seen in Figure \ref{fig:class-usage-in-dataset}. But this imbalance is likely not the cause of the issue since 
+"Wheel" has the second highest representation in the dataset, while "Dog" has a relatively low representation, but both classes show the same 
+fluctuation in accuracy at roughly the same time.\\
+The last option is that the fluctuations could be a result of random chance. Due to the stochastic nature of most optimization algorithms
+used in machine learning, the performance of the model can sometimes worsen purely due to random chance \parencite{Brownlee2021}.\\
+
 
 Notable is also the spread of the data and its variance found in the results as the accuracy improves over time. This is a key aspect of such models as for real-world applications, where consistent performance is essential. For instance, in self-driving cars, such deployed models must be able to consistently identify objects with high precision, not just occasionally. Even though the model at times reached high accuracy scores, it was inconsistent and instances of low accuracy scores were recurring, resulting in greater variance. However, in the later training stages,  as the median accuracy increased, the variance reduced, resulting in the lower accuracy scores of the given later stage, still being relatively high and precise predictions by the model.   \\
 
@@ -25,11 +42,13 @@ A further hypothesis stated that after 80\% accuracy, the data would start plate
 In conclusion, it can be stated that the hypothesis set forth for the experiment was to a high degree accurate and received validation from the data obtained, offering insightful conclusions for the given research question. 	\\	
 
 \subsection{Limitations}
-The first limitation faced was regarding the constrained data set available. This was portrayed by the model only being evaluated up to 20,000 trainings iterations, leaving the model's performance thereafter unknown. This meant that there was no data on how the model functions after the 20,000 iterations. This limitation restricted the possibility of evaluating patterns that could be found thereafter.\\ 
-
-A further limitation of the given experiment is the limited computing power a M1 Macbook Air offers. Whilst this laptop offers acceptable computing capabilities, it is restricted when it comes to extensive data sets and complex computations. This can have direct effects on the efficiency and depth of the experiment.\\
-
-The final limitation faced in this experiment concerns itself with the machine learning model created using Apple's Create ML. Given the lack of control and insight into the internal functions of Create ML, the possibility of customising the model according to the requirements is limited. Therefore having the given dependency on a pre-designed tool restricts the possible flexibility and addptability of the experiment following the given methodology. \\
+The first limitation faced was regarding the constrained data set available. This was portrayed by the model only being evaluated up to 20,000 trainings iterations, leaving the model's performance thereafter unknown. This meant that there was no data on how the model functions after the 20,000 iterations. This limitation restricted the possibility of evaluating patterns that could be found thereafter.
+A further limitation of the given experiment is the limited computing power a M1 Macbook Air offers. Whilst this laptop offers acceptable computing capabilities, it is restricted when it comes to extensive data sets and complex computations. This can have direct effects on the efficiency and depth of the experiment.
+The final limitation faced in this experiment concerns itself with the machine learning model created using Apple's Create ML. 
+Given the lack of control and insight into the internal functions of Create ML, the possibility of customising the model according to the
+requirements is limited. In addition, the use of this closed-source framework has limited the ability to accurately identify the dips 
+seen in figure \ref{fig:accuracy-vs-training-iterations} and to accurately investigate the problem. 
+Therefore having the given dependency on a pre-designed tool restricts the possible flexibility and addptability of the experiment following the given methodology. \\
 
 \subsection{Further research}
 Following the experiment concerning the relationship between accuracy and training iteration count, further research possibilities emerged. Here two such opportunities will be outlined with a short rationale. \\
