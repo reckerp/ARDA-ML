@@ -10,9 +10,9 @@ as a tool to enhance the clarity of identified trends. The results will be used 
    \caption{Quadratic Trend Analysis of Loss Reduction Over 20,000 Training Iterations}
    \label{fig:loss-vs-training-iterations}
 \end{figure}
-The data illustrated in Figure \ref{fig:loss-vs-training-iterations} displays the relationship between the loss of the object detection model over the 20,000 training iterations of the machine learning algorithms. It can be seen that during the initial stages of the experiment, a sharp decline in the loss can be viewed. This demonstrates the initial learning phase of the program. However, with an increased number of training iterations, the rate of the loss decreasing steadily slows down as it approaches its optimal state. \\
+The data illustrated in Figure \ref{fig:loss-vs-training-iterations} displays the relationship between the loss of the object detection model over the 20,000 training iterations of the machine learning algorithms. It can be seen that during the initial stages of the experiment, a sharp decline in the loss can be viewed. This demonstrates the initial learning phase of the program. However, with an increased number of training iterations, the rate of the loss decreasing steadily slows down as it approaches its optimal state. \\ 
 
-The quadratic trendline graphed in Figure \ref{fig:loss-vs-training-iterations}  displays the model approaching a state of convergence, as the training iteration count increases and loss decreases. Furthermore, the trendline expresses the non-linear relationship between training iterations and the loss of the model. \\
+The quadratic trendline graphed in Figure \ref{fig:loss-vs-training-iterations}  displays the model approaching a state of convergence, as the training iteration count increases and loss decreases. Furthermore, the trendline expresses the non-linear relationship between training iterations and the loss of the model. \\ 
 \newpage
 
 \subsection{Relationship between training iterations and accuracy}
@@ -22,7 +22,7 @@ It can be seen that all classes, besides "Person", rapidly increase after around
 all of these classes have an accuracy of roughly 80\%. Over the next 10,000 iterations, the accuracy then slowly approaches 95 to 100\%.
 This is different for "Person", which after 1000 iterations already starts with an accuracy of about 35\% and a steep incline to 97\%
 after 5500 iterations. After that, it slowly approaches 100\% accuracy.
-Important to note is the fluctuation of accuracy for "Dog" and "Wheel" at 13,000 and 14,000 iterations respectively.\\
+Important to note is the fluctuation of accuracy for "Dog" and "Wheel" at 13,000 and 14,000 iterations respectively.\\ 
 
 \begin{figure}[h]
    \centering
@@ -34,7 +34,7 @@ Important to note is the fluctuation of accuracy for "Dog" and "Wheel" at 13,000
 To assess the overall performance of the model, the average accuracy per iteration and its rate of change were calculated.
 The "Average Accuracy" in Figure \ref{fig:accuracy-improvement} displays the aggregated information seen in Figure 
 \ref{fig:accuracy-vs-training-iterations}. The aggregation of data attenuates the fluctuation seen for the classes "Dog" and "Wheel" 
-(See Fig. \ref{fig:accuracy-vs-training-iterations}) and thus making the upward trend between 10,000 and 20,000 iterations more visible. \\
+(See Fig. \ref{fig:accuracy-vs-training-iterations}) and thus making the upward trend between 10,000 and 20,000 iterations more visible. \\ 
 
 The model starts off with a substantial increase in accuracy, which is followed by a dip in the rate of change, as the rise in accuracy 
 decelerates. A further steep incline can be detected between 4000 and 6000 iterations, which is followed by a steady increase in accuracy, as
@@ -56,7 +56,6 @@ key points in the model's learning process and makes instances in which the aver
 visible. The described fluctuation in accuracy needed to be further investigated, hinting at possible
 challenges in the learning process of the object detection model. \\
 
-
 \subsection{Analysing fluctuation in loss and accuracy}
 
 The data reveals a notable decline in accuracy at 13,000 training iterations for the dog class and 14,000 training iterations for the wheel class, respectively. To further investigate the observed downturns in the data, analysing the average data points displaying the decline can provide a more comprehensive insight. The data points displayed in Figure \ref{fig:accuracy-vs-training-iterations} for each class represent the average accuracy score of three images. 
@@ -77,7 +76,7 @@ Figure \ref{fig:14000-dog} displays three different instances of the dog class t
    \label{fig:image-1-accuracy}
 \end{figure}
 
-To further illustrate and investigate the dip in accuracy in the dog class, and the found anomaly in Image 1,  Figure \ref{fig:image-1-accuracy} can be utilised, which displays the relationship between accuracy and training interaction for Image 1. Notable in this Figure, is that the previously discovered anomaly of 12\% at 13,000 training iterations is also clearly represented in the graph at the steep dip. This data point is a significant deviation from the otherwise existing pattern, displaying a clear divergence from the expected accuracy trajectory. Therefore it can be concluded that this data point represents an outlier in the data. Reasons for such an outlier will be evaluated in the discussion chapter. 
+To further illustrate and investigate the dip in accuracy in the dog class, and the found anomaly in Image 1,  Figure \ref{fig:image-1-accuracy} can be utilised, which displays the relationship between accuracy and training interaction for Image 1. Notable in this Figure, is that the previously discovered anomaly of 12\% at 13,000 training iterations is also clearly represented in the graph at the steep dip. This data point is a significant deviation from the otherwise existing pattern, displaying a clear divergence from the expected accuracy trajectory. Therefore it can be concluded that this data point represents an outlier in the data. Reasons for such an outlier will be evaluated in the discussion chapter.  
 
 \begin{figure}[h!]
    \centering
@@ -87,7 +86,6 @@ To further illustrate and investigate the dip in accuracy in the dog class, and 
 \end{figure}
 
 A similar analysis can be drawn for the wheel class, in Figure \ref{fig:13000-wheel} the accuracy score for the three instances of the wheel class at 14,000 training iterations can be observed. Whilst Images 1 and 2 received 100\% and 98\% accuracy, image 3 displays as a clear anomaly with only 2\% accuracy. 
-
 
 \begin{figure}[h!]
    \centering
@@ -108,11 +106,10 @@ To further analyse the cause of the anomaly found at 14,000 iterations in Image 
    \label{fig:Box-plot}
 \end{figure}
 
+Figure \ref{fig:Box-plot} illustrates a comprehensive overview of the changes in the model's accuracy throughout 20,000 training iterations. It displays the distribution and tendencies of the accuracy throughout the training process in relation to the entire model.\\ 
 
-Figure \ref{fig:Box-plot} illustrates a comprehensive overview of the changes in the model's accuracy throughout 20,000 training iterations. It displays the distribution and tendencies of the accuracy throughout the training process in relation to the entire model.\\
+Initially, the Figure displays a surge in the model's accuracy up to 4000 iterations. From this point onwards, the median accuracy stabilizes and the variance diminishes in the 4000-12,000 training iteration range. Beyond 12,000 iterations, there is only minimal change in the median accuracy, signalling the onset of a plateau. Thereafter, the graph displays that with further training, only a slight decrease in variance and an increase in median is achieved. \\ 
 
-Initially, the Figure displays a surge in the model's accuracy up to 4000 iterations. From this point onwards, the median accuracy stabilizes and the variance diminishes in the 4000-12,000 training iteration range. Beyond 12,000 iterations, there is only minimal change in the median accuracy, signalling the onset of a plateau. Thereafter, the graph displays that with further training, only a slight decrease in variance and an increase in median is achieved. \\
-
-One key aspect that the box plot highlights is the changes in data variability throughout the model's training process. Initially, a greater degree of variability is displayed, especially in the grouped 2000-4000 training iteration block. Here the interquartile range (IQR) is notably wider, clearly displaying the greater spread of different accuracy scores.  However, as the training iteration count increases, the range of the spread decreases. The IQR becomes progressively narrower in the higher training iteration groups, indicating a decrease in variability. \\
+One key aspect that the box plot highlights is the changes in data variability throughout the model's training process. Initially, a greater degree of variability is displayed, especially in the grouped 2000-4000 training iteration block. Here the interquartile range (IQR) is notably wider, clearly displaying the greater spread of different accuracy scores.  However, as the training iteration count increases, the range of the spread decreases. The IQR becomes progressively narrower in the higher training iteration groups, indicating a decrease in variability. \\ 
 
 

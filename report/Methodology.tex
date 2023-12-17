@@ -78,19 +78,19 @@ The annotations JSON file, included in the training dataset \parencite{pascal202
 A custom Python script was written to transform the data into a useable format, which was required to calculate the class distribution 
 and the image count per class. To illustrate which classes were evaluated and their representation in the dataset, a bar chart was created 
 (See Fig.~\ref{fig:class-usage-in-dataset}). This choice was motivated by the observation that "[v]ertical bar charts are useful to compare 
-different categorical [...] variables" \parencite{Statistics-Canada2021}.\\
+different categorical [...] variables" \parencite{Statistics-Canada2021}.\\ 
 \newpage
 
 % LOSS GRAPH
 The loss was graphed by using a scatter plot (See Fig.~\ref{fig:loss-vs-training-iterations})
 as it visualises the relationship between two or more quantitative variables. They are especially helpful when examining whether
 the values of one variable are influenced by the values of the other variable \parencite{Statistics-Canada2021b}. 
-Additionally, a quadratic trend line was added to identify the trend and outliers.\\
+Additionally, a quadratic trend line was added to identify the trend and outliers.\\ 
 
 % ACCURACY GRAPH
 To plot the accuracy all CSV files were merged by iterating through each file, calculating the mean accuracy per iteration and appending it
 to the new pandas data frame. This resulted in a data frame with the mean accuracy per iteration for each class. This data was then plotted using
-a line chart (See Fig.~\ref{fig:accuracy-vs-training-iterations}). \\
+a line chart (See Fig.~\ref{fig:accuracy-vs-training-iterations}). \\ 
 
 % ACCURACY IMPROVEMENT GRAPH
 To illustrate the improvement of accuracy over time, the average accuracy of all classes per iteration was calculated.
@@ -105,5 +105,5 @@ This was done to identify outliers and to clearly display discrepancies in perfo
 
 % BOX PLOT PER ITERATION
 To obtain a comprehensive insight into the variation in the model's accuracies, a box plot was utilised (See. Fig~\ref{fig:Box-plot}). This visual representation illustrated the distribution of the accuracy measurements gathered during the experiment, portraying how the model evolved throughout its training process.
-This graph is a good choice since its use case is illustrating the distribution of data \parencite{Tableau}. \\
+This graph is a good choice since its use case is illustrating the distribution of data \parencite{Tableau}.\\
 
