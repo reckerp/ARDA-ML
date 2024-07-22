@@ -1,5 +1,11 @@
 # ARDA-ML
-Fontys University of Applied Sciences: Applied Research and Data Analysis
+Fontys University of Applied Sciences: Applied Research and Data Analysis 
+ 
+**Authors:**
+- [Louis Ferger-Andrews](https://github.com/LouisFerger-Andrews)
+- [Paul Recker](https://github.com/reckerp)
+
+Find the Latex paper [here](https://github.com/reckerp/ARDA-ML/tree/main/report)
 
 
 ## 1. Research Questions
@@ -23,15 +29,13 @@ Accuracy of the computer vision program (the accuracy of the program identifying
 - Same Laptop specifications 
 
 ## 3. Hypothesis
-_[updated here](report/Introduction.tex)_ <br/>
-It can be hypothesised that increasing the number of training iterations a machine learning algorithm is trained with, will have a direct impact on the accuracy of the computer vision model. 
-This can be predicted on the basis that each additional iteration of training for the program, will allow the given program to converge towards a more optimal solution by adjusting its parameters to minimize the differences between the training and test data. 
+Based on the context provided, it can be hypothesised that increasing the training iterations for the machine learning algorithm will have a direct correlation with the accuracy of the object detection model. Hence the greater the number of training iterations the program goes through, the greater the accuracy should become. This hypothesis is based on the fact that each additional iteration of training, will allow the model to converge towards a more optimised state by adjusting its parameters to minimize the differences between the training and the test data.
 
-A further reason why a higher iteration count could lead to increased accuracy in object detection is, that the model will become more familiar with complex patterns due to its increased interaction with these patterns, in the training data. Therefore the program will be able to detect such patterns with a decreased level of error which will help the program's overall accuracy significantly. 
+It is expected that during the initial training phases of the given experiment, specifically between 1,000 and 3,000 iterations, the model might face challenges in identifying objects in the test images accurately. In the cases where it does recognise the given objects, it will probably do so with only a minimal degree of accuracy. This is thereafter expected to greatly change as the model rapidly begins to gain a basic understanding of the objects it is confronted with based on its training. Therefore, it is appropriate to assume that during the stage, between  4,000 and 13,000 the greatest increase in accuracy should be displayed.  Beyond this point, it can be expected that as the model reaches a substantial accuracy of around 80\%, it can be hypothesised that the growth in accuracy will steadily decrease as the model converges towards an optimal state and the accuracy plateaus.
 
-A further prediction can be stated that during the first few iterations, the greatest increase in accuracy should be visible. This will be because the program will initially begin with a 0% accuracy, as with no training the model will not be able to detect any objects yet. But then with a few training iterations, the model will rapidly develop a basic understanding of the objects and therefore the accuracy of the program will develop swiftly as well. Additionally, it can be expected, that as the program becomes more accurate, the growth of the accuracy will steadily decrease as the program nears its optimal state. Based on this it can be assumed that the amount of accuracy gained per training iterations will decrease as the state of the model develops and the accuracy increases. 
+Furthermore, it can be postulated that a decrease in the model's loss should lead to an increase in accuracy, considering the inverse relationship between loss and accuracy, where a loss reduction indicates an improved performance as loss is measured by testing for accuracy.
 
-Overall it can be concluded that there should be a significant correlation between the accuracy and the training iterations for the experiment discussed.  
+In summary, a significant correlation between the accuracy and the number of training iterations for the machine learning algorithm is expected, which will gradually decrease as the model approaches its optimal state.
 
 ## 4. Research Methodology
 - Empirical research: relies on evidence that can be observed or measured
@@ -43,8 +47,8 @@ Overall it can be concluded that there should be a significant correlation betwe
 
 ### 4.1 Chapter overview
 - Methodology
-    - Research Design => type of research (e.g. see above). Justify why this approach is best suited to answer research questions.
-    - Experiment setup and execution => dataset, createml (+ its algorithm), 1k steps, ...
-    - Experiment evaluation => evaluation categories and images, data gathered
-    - Data transformation and visualisation => python notebook, types of graphs etc, (possibly how this report was created-> latex, ...)
+    - Research Design
+    - Experiment setup and execution 
+    - Experiment evaluation
+    - Data transformation and visualisation
 
